@@ -7,7 +7,7 @@ Table of Contents
   * [Heudiconv](#heudiconv)
 
 # Introduction
-The first step in processing the data is organizing the raw data, the DICOM (.dcm) files, into an appropriate file structure so that a BIDS converter can be used on it. BIDS ([Brain Imaging Database Structure](https://bids.neuroimaging.io/)) is a standardized way to organize neuroimaging data, and is how programs like fmriprep need the data to be organized. This guide is following along with the Stanford Center for Reproducible Neuroscience's [BIDS tutorial series](https://reproducibility.stanford.edu/bids-tutorial-series-part-2a/).
+The first step in processing the data is organizing the raw data, the DICOM (.dcm) files, into an appropriate file structure so that a BIDS converter can be used on it. BIDS ([Brain Imaging Database Structure](https://bids.neuroimaging.io/)) is a standardized way to organize neuroimaging data, and is how programs like fmriprep need the data to be organized. The heudiconv portion of this guide is following along with the Stanford Center for Reproducible Neuroscience's [BIDS tutorial series](https://reproducibility.stanford.edu/bids-tutorial-series-part-2a/).
 
 ### Your parent directory (aka project folder) should be in a structure like this <br>
 
