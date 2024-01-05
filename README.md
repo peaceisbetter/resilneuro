@@ -1,4 +1,4 @@
-# resilneuro
+# Resiliency Project Neuroimaging Codes
 This is a repository for analyzing neuroimaging data on TAMU HPRC clusters for the [Human Movement Complexity Lab](https://hmcl.tamu.edu/).
 
 Table of Contents
