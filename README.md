@@ -9,11 +9,21 @@ Table of Contents
 # Introduction
 The first step in processing the data is organizing the raw data, the DICOM (.dcm) files, into an appropriate file structure so that a BIDS converter can be used on it. BIDS ([Brain Imaging Database Structure](https://bids.neuroimaging.io/)) is a standardized way to organize neuroimaging data, and is how programs like fmriprep need the data to be organized.
 
-DICOM data should be stored in a structure like
-	- dicom <br>
-		-> sub-{subject id} <br>
-    -> ses-{session id} <br>
-      -> files.dcm <br>
+### DICOM data should be stored in a structure like <br>
+dicom
+.
+├── sub-{subject id}
+|  ├── ses-{session id}
+|  |  └── files.dcm
+└── ...
 
+
+    .
+    ├── ...
+    ├── test                    # Test files (alternatively `spec` or `tests`)
+    │   ├── benchmarks          # Load and stress tests
+    │   ├── integration         # End-to-end, integration tests (alternatively `e2e`)
+    │   └── unit                # Unit tests
+    └── ...
 
 # Heudiconv
