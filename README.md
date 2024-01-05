@@ -50,7 +50,7 @@ $sbatch create_heudiconv_sif.sh
 This will create a 'heudiconv_latest.sif' file in the scratch directory. To change the directory where it is stored, you can alter the code in 'create_heudiconv_sif.sh' on the first executed line to 'cd $SCRATCH/your/file/path' or you can move it manually in the folder structure by clicking 'copy/move' and navigating to the appropriate folder.
 
 ## Second, we will run heudiconv on a single subject to create the metadata files needed to run the entire dataset
-> we run the shell script with sbatch, and specify a single subject with the -s option
+Run the create_heuristic.sh shell script with sbatch, and specify a single subject with the -s option. In this example, the subject folder name is 'Resiliency_201'.
 ```shell
 sbatch create_heuristic.sh -s Resiliency_201
 ```
