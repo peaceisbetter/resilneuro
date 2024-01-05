@@ -11,19 +11,11 @@ The first step in processing the data is organizing the raw data, the DICOM (.dc
 
 ### DICOM data should be stored in a structure like <br>
 dicom
-.
-├── sub-{subject id}
-|  ├── ses-{session id}
-|  |  └── files.dcm
-└── ...
 
-
-    .
-    ├── ...
-    ├── test                    # Test files (alternatively `spec` or `tests`)
-    │   ├── benchmarks          # Load and stress tests
-    │   ├── integration         # End-to-end, integration tests (alternatively `e2e`)
-    │   └── unit                # Unit tests
+    dicom
+    ├── sub-{subject id}
+    |  └── ses-{session id}
+    |     └── files.dcm
     └── ...
 
 # Heudiconv
