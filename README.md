@@ -31,7 +31,7 @@ The next step is to convert from DICOM to NIFTI, and to store the NIFTI files in
 We will use the tool [heudiconv](https://heudiconv.readthedocs.io/en/latest/index.html) to convert from dicom to nifti, and store it in BIDS format. Heudiconv is best run through a container program, like docker or singularity. Since we are using the TAMU HPRC, we will be using singularity, because it was built specifically for use on HPC clusters. Singularity can run docker images, but we will use a .sif file (singularity file).
 
 ## First we will create the heudiconv_latest.sif file <br>
-> only do this step if you do not have an image for heudiconv_latest
+> only do this step if you do not have an image for heudiconv_latest<br>
 To start, change directory into your project's code folder
 ```shell
 $cd $SCRATCH/yourproject/codes
