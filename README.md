@@ -28,7 +28,7 @@ The first step in processing the data is organizing the raw data, the DICOM (.dc
 # Heudiconv
 The next step is to convert from DICOM to NIFTI, and to store the NIFTI files in a BIDS compliant data set. BIDS also requires a dataset_description.json file, and a participants.tsv file in the BIDS directory. 
 
-We will use the tool "HeuDiConv" to convert from dicom to nifti, and store it in BIDS format. Heudiconv is best run through a container program, like docker or singularity. Since we are using the TAMU HPRC, we will be using singularity, because it was built specifically for use on HPC clusters. Singularity can run docker images, but we will use a .sif file (singularity file).
+We will use the tool [heudiconv](https://heudiconv.readthedocs.io/en/latest/index.html) to convert from dicom to nifti, and store it in BIDS format. Heudiconv is best run through a container program, like docker or singularity. Since we are using the TAMU HPRC, we will be using singularity, because it was built specifically for use on HPC clusters. Singularity can run docker images, but we will use a .sif file (singularity file).
 
 ## First we will create the heudiconv_latest.sif file <br>
 To start, change directory into your project's code folder
