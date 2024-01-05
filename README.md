@@ -52,6 +52,6 @@ This will create a 'heudiconv_latest.sif' file in the scratch directory. To chan
 ## Second, we will run heudiconv on a single subject to create the metadata files needed to run the entire dataset
 Run the create_heuristic.sh shell script with sbatch, and specify a single subject with the -s option. In this example, the subject folder name is 'Resiliency_201'.
 ```shell
-sbatch create_heuristic.sh -s Resiliency_201
+sbatch create_heuristic.sh Resiliency_201
 ```
 
