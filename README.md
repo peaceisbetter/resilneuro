@@ -56,3 +56,7 @@ sbatch create_heuristic.sh Resiliency_201
 ```
 After running heudiconv the bids directory will be populated with the following contents:<br>
 ![alt text](https://github.com/peaceisbetter/resilneuro/blob/main/images/heudiconvoutput.png)
+
+<p align="center">
+  <img src="https://github.com/peaceisbetter/resilneuro/blob/main/images/heudiconvoutput.png" width="350" title="hover text">
+</p>
