@@ -16,10 +16,10 @@
 subject=$1
 
 # Create an object to store the file path to the dicom files on the scratch directory
-dicom=/scratch/user/jackpmanning/heudiconvprac/dicom/
+dicom='../dicom/'
 
 # Create an object to store the file path to the heudiconv singularity file
-heudiconv='/scratch/user/jackpmanning/software/heudiconv_latest.sif'
+heudiconv=$SCRATCH/software/heudiconv_latest.sif
 
 # Run the heudiconv singularity container to create the heuristic file
-singularity run -B /scratch/user/jackpmanning/heudiconvprac:/parent ${heudiconv} --files /parent/dicom -o /parent/bids -s ${subject} -c none -b -f convertall
+singularity run -B $SCRATCH/resr3:/parent ${heudiconv} --files /parent/dicom/${subject} -o /parent/bids -s ${subject} -c none -b -f convertall
