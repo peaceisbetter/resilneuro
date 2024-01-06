@@ -65,4 +65,12 @@ After running heudiconv the bids directory will be populated with the following 
 
 'heuristic.py' is a general file and is not specific to your dataset yet. This is the file that heudiconv will use to organize your dataset into a bids compliant data set. If this step is done wrong, fmriprep will not run properly, and will give an error indicating that the directory is not bids compliant.
 
-Download the .heudiconv folder to your local machine and open both heuristic.py and dicominfo.tsv in your preferred IDE. You may need to load dicom.tsv into a software like R or excel for it to be visually appealing. You can use [loaddicominfo.R](https://github.com/peaceisbetter/resilneuro/blob/main/heudiconv/loaddicominfo.R) for this.
+Download the .heudiconv folder to your local machine and open both heuristic.py and dicominfo.tsv in your preferred IDE. You may need to load dicom.tsv into a software like R or excel for it to be visually appealing. You can use [loaddicominfo.R](https://github.com/peaceisbetter/resilneuro/blob/main/heudiconv/loaddicominfo.R) for this. Delete the .heudiconv folder from the HPC cluster.
+
+Once I understand how to make the heuristic file, I'll update this portion. For now it has already been done, so we will be using the myheuristic.py file. Further information is available in the heudiconv documentation [here](https://reproducibility.stanford.edu/bids-tutorial-series-part-2a/#heuman4). After you modify the heuristic.py file, upload it to the codes folder.
+
+## Fourth, after modifying the heuristic.py file, we will run the heudiconv conversion
+
+
+
+
