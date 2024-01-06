@@ -54,4 +54,5 @@ Run the create_heuristic.sh shell script with sbatch, and specify a single subje
 ```shell
 sbatch create_heuristic.sh Resiliency_201
 ```
-
+After running heudiconv the bids directory will be populated with the following contents:<br>
+![alt text](https://github.com/peaceisbetter/resilneuro/blob/main/images/heudiconvoutput.png)
