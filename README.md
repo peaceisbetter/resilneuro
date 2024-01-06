@@ -59,3 +59,9 @@ After running heudiconv the bids directory will be populated with the following 
 <p align="center">
   <img src="https://github.com/peaceisbetter/resilneuro/blob/main/images/heudiconvoutput.png" width="550" title="Heudiconv First Run Output">
 </p>
+
+## Third we will modify the heuristic.py file<br>
+> TIP: The .heudiconv folder is a Dotfile, meaning it is hidden by default. To see the folder and it's contents, click the "Show Dotfiles" check box.
+> heuristic.py is a general file and is not specific to your dataset yet. This is the file that heudiconv will use to organize your dataset into a bids compliant data set. If this step is done wrong, fmriprep will not run properly, and will give an error indicating that the directory is not bids compliant.
+
+Download the .heudiconv folder
