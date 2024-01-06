@@ -62,6 +62,7 @@ After running heudiconv the bids directory will be populated with the following 
 
 ## Third we will modify the heuristic.py file<br>
 > TIP: The .heudiconv folder is a Dotfile, meaning it is hidden by default. To see the folder and it's contents, click the "Show Dotfiles" check box.
-> heuristic.py is a general file and is not specific to your dataset yet. This is the file that heudiconv will use to organize your dataset into a bids compliant data set. If this step is done wrong, fmriprep will not run properly, and will give an error indicating that the directory is not bids compliant.
 
-Download the .heudiconv folder
+'heuristic.py' is a general file and is not specific to your dataset yet. This is the file that heudiconv will use to organize your dataset into a bids compliant data set. If this step is done wrong, fmriprep will not run properly, and will give an error indicating that the directory is not bids compliant.
+
+Download the .heudiconv folder to your local machine and open both heuristic.py and dicominfo.tsv in your preferred IDE. You may need to load dicom.tsv into a software like R or excel for it to be visually appealing. [loaddicominfo.R]()
