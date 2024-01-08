@@ -87,6 +87,8 @@ After that, if batch_run_heudiconv is in the codes folder, you will submit it as
 sbatch batch_run_heudiconv.sh
 ```
 
+If that worked correctly your bids folder should look something like this:
+
 <p align="center">
   <img src="https://github.com/peaceisbetter/resilneuro/blob/main/images/after_heudiconv_second_pass.jpg" width="550" title="Heudiconv First Run Output">
 </p>
