@@ -33,6 +33,7 @@ We will use the tool [heudiconv](https://heudiconv.readthedocs.io/en/latest/inde
 
 ## First we will create the heudiconv_latest.sif file <br>
 > only do this step if you do not have an image for heudiconv_latest<br>
+
 To start, change directory into your project's code folder
 ```shell
 $cd $SCRATCH/yourproject/codes
