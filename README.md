@@ -93,4 +93,18 @@ If that worked correctly your bids folder should look something like this:
   <img src="https://github.com/peaceisbetter/resilneuro/blob/main/images/after_heudiconv_second_pass.jpg" width="550" title="Heudiconv First Run Output">
 </p>
 
+Before moving on to fmriprep, we should validate the bids directory using [bids-validator](https://github.com/bids-standard/bids-validator?tab=readme-ov-file#docker-image). To do so, we will create a singularity image of bids-validatore, store it in our software file, then submit the singularity run command as a batch job using slurm.<br>
 
+To start this process, create the bids-validator image by executing the following script:
+
+```
+sbatch create_bids_validator.sh
+```
+
+This will create the singularity image in the scratch directory. Move it to the software folder then modify the bids_validator file so that the correct file path is present in the singularity run command. Then execute the script through slurm:
+
+```
+sbatch bids_validator.sh
+```
+
+The output will be in the code folder. Check it to see if the directory is valid. If you get no errors, then you are ready to move on.
