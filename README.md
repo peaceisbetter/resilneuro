@@ -76,5 +76,15 @@ Heudiconv can be run on a single subject by using the following command:
 singularity run -B $SCRATCH/path/to/parent:/parent $SCRATCH/path/to/heudiconv_latest.sif --files $SCRATCH/parent/dicom/subject -o /parent/bids -s subject's_foldername -c dcm2niix -b -f /parent/codes/myheuristic.py
 ```
 
-However, it is possible to batch process the heudiconv conversion. To do so we will use batch_run_heudiconv.sh.
+However, it is possible to batch process the heudiconv conversion. To do so we will use batch_run_heudiconv.sh. In the shell script there is a dicom variable which you will have to manipulate. The 'dicom' variable contains the file path to the dicom files within the scratch directory. If you have set up the folder directory correctly, it should be $SCRATCH/project_folder/dicom, and you will change 'project_folder' to whatever you have named your project's folder.
+
+```shell
+dicom=$SCRATCH/resr3/dicom
+```
+After that, if batch_run_heudiconv is in the codes folder, you will submit it as a job using slurm.
+
+```
+sbatch batch_run_heudiconv.sh
+```
+
 
