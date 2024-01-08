@@ -71,7 +71,7 @@ Download the .heudiconv folder to your local machine and open both heuristic.py 
 
 __Before moving on to step 4, delete the .heudiconv folder from the HPC cluster.__
 
-Once I understand how to make the heuristic file, I'll update this portion. For now it has already been done, so we will be using the myheuristic.py file. Further information is available in the heudiconv documentation [here](https://reproducibility.stanford.edu/bids-tutorial-series-part-2a/#heuman4). After you modify the heuristic.py file, upload it to the codes folder.
+>Once I understand how to make the heuristic file, I'll update this portion. For now it has already been done, so we will be using the myheuristic.py file. Further information is available in the heudiconv documentation [here](https://reproducibility.stanford.edu/bids-tutorial-series-part-2a/#heuman4). After you modify the heuristic.py file, upload it to the codes folder.
 
 ## Fourth, after modifying the heuristic.py file, we will run the heudiconv conversion
 Heudiconv can be run on a single subject by using the following command:
