@@ -54,7 +54,7 @@ This will create a 'heudiconv_latest.sif' file in the scratch directory. To chan
 ## Second, we will run heudiconv on a single subject to create the metadata files needed to run the entire dataset
 Run the create_heuristic.sh shell script with sbatch, and specify a single subject with the -s option. In this example, the subject folder name is 'Resiliency_201'.
 ```shell
-sbatch create_heuristic.sh Resiliency_201
+$sbatch create_heuristic.sh Resiliency_201
 ```
 After running heudiconv the bids directory will be populated with the following contents:<br>
 
@@ -75,7 +75,7 @@ Once I understand how to make the heuristic file, I'll update this portion. For 
 Heudiconv can be run on a single subject by using the following command:
 
 ```
-singularity run -B $SCRATCH/path/to/parent:/parent $SCRATCH/path/to/heudiconv_latest.sif --files $SCRATCH/parent/dicom/subject -o /parent/bids -s subject's_foldername -c dcm2niix -b -f /parent/codes/myheuristic.py
+$singularity run -B $SCRATCH/path/to/parent:/parent $SCRATCH/path/to/heudiconv_latest.sif --files $SCRATCH/parent/dicom/subject -o /parent/bids -s subject's_foldername -c dcm2niix -b -f /parent/codes/myheuristic.py
 ```
 
 However, it is possible to batch process the heudiconv conversion. To do so we will use batch_run_heudiconv.sh. In the shell script there is a dicom variable which you will have to manipulate. The 'dicom' variable contains the file path to the dicom files within the scratch directory. If you have set up the folder directory correctly, it should be $SCRATCH/project_folder/dicom, and you will change 'project_folder' to whatever you have named your project's folder.
@@ -86,7 +86,7 @@ dicom=$SCRATCH/resr3/dicom
 After that, if batch_run_heudiconv is in the codes folder, you will submit it as a job using slurm.
 
 ```
-sbatch batch_run_heudiconv.sh
+$sbatch batch_run_heudiconv.sh
 ```
 
 If that worked correctly your bids folder should look something like this:
@@ -100,13 +100,13 @@ Before moving on to fmriprep, we should validate the bids directory using [bids-
 To start this process, create the bids-validator image by executing the following script:
 
 ```
-sbatch create_bids_validator.sh
+$sbatch create_bids_validator.sh
 ```
 
 This will create the singularity image in the scratch directory. Move it to the software folder then run the bids_validator.sh script through slurm:
 
 ```
-sbatch bids_validator.sh
+$sbatch bids_validator.sh
 ```
 
 The output will be in the code folder. Check it to see if the directory is valid. If you get no errors, then you are ready to move on.
