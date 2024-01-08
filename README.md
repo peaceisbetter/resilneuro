@@ -5,6 +5,7 @@ Table of Contents
 =================
   * [Introduction](#introduction)
   * [Heudiconv](#heudiconv)
+  * [fMRIPrep](#fMRIPrep)
 
 # Introduction
 The first step in processing the data is organizing the raw data, the DICOM (.dcm) files, into an appropriate file structure so that a BIDS converter can be used on it. BIDS ([Brain Imaging Database Structure](https://bids.neuroimaging.io/)) is a standardized way to organize neuroimaging data, and is how programs like fmriprep need the data to be organized. The heudiconv portion of this guide is following along with the Stanford Center for Reproducible Neuroscience's [BIDS tutorial series](https://reproducibility.stanford.edu/bids-tutorial-series-part-2a/).
@@ -101,10 +102,12 @@ To start this process, create the bids-validator image by executing the followin
 sbatch create_bids_validator.sh
 ```
 
-This will create the singularity image in the scratch directory. Move it to the software folder then modify the bids_validator file so that the correct file path is present in the singularity run command. Then execute the script through slurm:
+This will create the singularity image in the scratch directory. Move it to the software folder then run the bids_validator.sh script through slurm:
 
 ```
 sbatch bids_validator.sh
 ```
 
 The output will be in the code folder. Check it to see if the directory is valid. If you get no errors, then you are ready to move on.
+
+# fMRIPrep
