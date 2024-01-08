@@ -70,7 +70,11 @@ Download the .heudiconv folder to your local machine and open both heuristic.py 
 Once I understand how to make the heuristic file, I'll update this portion. For now it has already been done, so we will be using the myheuristic.py file. Further information is available in the heudiconv documentation [here](https://reproducibility.stanford.edu/bids-tutorial-series-part-2a/#heuman4). After you modify the heuristic.py file, upload it to the codes folder.
 
 ## Fourth, after modifying the heuristic.py file, we will run the heudiconv conversion
+Heudiconv can be run on a single subject by using the following command:
 
+```
+singularity run -B $SCRATCH/path/to/parent:/parent $SCRATCH/path/to/heudiconv_latest.sif --files $SCRATCH/parent/dicom/subject -o /parent/bids -s subject's_foldername -c dcm2niix -b -f /parent/codes/myheuristic.py
+```
 
-
+However, it is possible to batch process the heudiconv conversion. To do so we will use batch_run_heudiconv.sh.
 
