@@ -114,7 +114,11 @@ $sbatch bids_validator.sh
 The output will be in the code folder. Check it to see if the directory is valid. If you get no errors, then you are ready to move on.
 
 # fMRIPrep
-To run fmriprep we do
+To run fmriprep we simply run the following code in the terminal, replacing SUBJECT_FOLDR_NAME with the folder name for the subject which is present in the bids directory. To view command line arguments for fmriprep, visit [here](https://fmriprep.org/en/stable/usage.html#command-line-arguments). The command line arguments are passed to the sinularity run command within the run_fmriprep.sh script, not to the sbatch command in the HPRC terminal.
+
+```
+sbatch run_fmriprep.sh SUBJECT_FOLDER_NAME
+```
 
 After a subject has completed the fmriprep folder will pe populated like so:
 
