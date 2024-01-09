@@ -114,3 +114,12 @@ $sbatch bids_validator.sh
 The output will be in the code folder. Check it to see if the directory is valid. If you get no errors, then you are ready to move on.
 
 # fMRIPrep
+To run fmriprep we do
+
+After a subject has completed the fmriprep folder will pe populated like so:
+
+<p align="center">
+  <img src="" width="550" title="Heudiconv First Run Output">
+</p>
+
+<img width="611" alt="image" src="https://github.com/peaceisbetter/resilneuro/assets/29387031/2154b5b4-e101-4f41-bd97-a211a718fadd">
