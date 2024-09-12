@@ -21,4 +21,4 @@ Then, open it in a text editor (like visual studio code) and put searchable stri
 
 ## Fourth
 After the template.fsf file has been updated with the searchable strings you want, you will have to use the template.fsf file to create an .fsf file for every subject, every condition, and every run. See [run_fsl_python.ipynb](https://github.com/peaceisbetter/resilneuro/blob/main/fsl-code/run_fsl_python.ipynb) for example code on how to do this, along with the output to expect at each step
-- run_fsl_python.ipynb is a jupyter notebook using python to run fsl for each .fsf file I created.
+> run_fsl_python.ipynb is a jupyter notebook using python to run fsl for each .fsf file I created.
