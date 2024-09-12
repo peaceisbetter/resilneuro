@@ -35,17 +35,17 @@ We will use the tool [heudiconv](https://heudiconv.readthedocs.io/en/latest/inde
 > only do this step if you do not have an image for heudiconv_latest<br>
 
 To start, change directory into your project's code folder
-```shell
+```bash
 $cd $SCRATCH/yourproject/codes
 ```
 
 To pull a docker image on the cluster we need to first connect the cluster to the internet. Us the following shell command to connect the compute node to the internet.
-```shell
+```bash
 $module load WebProxy
 ```
 
 Then, run the following command to run the create_heudiconv.sh script on the cluster
-```shell
+```bash
 $sbatch create_heudiconv_sif.sh
 ```
 
@@ -53,7 +53,7 @@ This will create a 'heudiconv_latest.sif' file in the scratch directory. To chan
 
 ## Second, we will run heudiconv on a single subject to create the metadata files needed to run the entire dataset
 Run the create_heuristic.sh shell script with sbatch, and specify a single subject with the -s option. In this example, the subject folder name is 'Resiliency_201'.
-```shell
+```bash
 $sbatch create_heuristic.sh Resiliency_201
 ```
 After running heudiconv the bids directory will be populated with the following contents:<br>
@@ -76,18 +76,18 @@ __Before moving on to step 4, delete the .heudiconv folder from the HPC cluster.
 ## Fourth, after modifying the heuristic.py file, we will run the heudiconv conversion
 Heudiconv can be run on a single subject by using the following command:
 
-```
+```bash
 $singularity run -B $SCRATCH/path/to/parent:/parent $SCRATCH/path/to/heudiconv_latest.sif --files $SCRATCH/parent/dicom/subject -o /parent/bids -s subject's_foldername -c dcm2niix -b -f /parent/codes/myheuristic.py
 ```
 
 However, it is possible to batch process the heudiconv conversion. To do so we will use batch_run_heudiconv.sh. In the shell script there is a dicom variable which you will have to manipulate. The 'dicom' variable contains the file path to the dicom files within the scratch directory. If you have set up the folder directory correctly, it should be $SCRATCH/project_folder/dicom, and you will change 'project_folder' to whatever you have named your project's folder.
 
-```shell
+```bash
 dicom=$SCRATCH/resr3/dicom
 ```
 After that, if batch_run_heudiconv is in the codes folder, you will submit it as a job using slurm.
 
-```
+```bash
 $sbatch batch_run_heudiconv.sh
 ```
 
@@ -101,13 +101,13 @@ Before moving on to fmriprep, we should validate the bids directory using [bids-
 
 To start this process, create the bids-validator image by executing the following script:
 
-```
+```bash
 $sbatch create_bids_validator.sh
 ```
 
 This will create the singularity image in the scratch directory. Move it to the software folder then run the bids_validator.sh script through slurm:
 
-```
+```bash
 $sbatch bids_validator.sh
 ```
 
@@ -116,7 +116,7 @@ The output will be in the code folder. Check it to see if the directory is valid
 # fMRIPrep
 To run fmriprep we simply run the following code in the terminal, replacing SUBJECT_FOLDR_NAME with the folder name for the subject which is present in the bids directory. To view command line arguments for fmriprep, visit [here](https://fmriprep.org/en/stable/usage.html#command-line-arguments). The command line arguments are passed to the sinularity run command within the run_fmriprep.sh script, not to the sbatch command in the HPRC terminal.
 
-```
+```bash
 sbatch run_fmriprep.sh SUBJECT_FOLDER_NAME
 ```
 
