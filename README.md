@@ -126,4 +126,6 @@ After a subject has completed the fmriprep folder will pe populated like so:
   <img src="https://github.com/peaceisbetter/resilneuro/blob/main/images/postfmriprep.png" width="550" title="Heudiconv First Run Output">
 </p>
 
+# FSL
+### To process the outputs of fMRIPrep in FSL, go to the fsl-code directory [here](https://github.com/peaceisbetter/resilneuro/tree/main/fsl-code).
 
