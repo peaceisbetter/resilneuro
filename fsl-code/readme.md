@@ -17,7 +17,14 @@ Select ‘First-level analysis’ and ‘Statistics’ at the top of FEAT.
 ## Third
 Copy/paste and rename your .fsf file to template.fsf.
 
-Then, open it in a text editor (like visual studio code) and put searchable strings into it that you can search/replace with with a python script like [make_fsf_lev_1.py](https://github.com/peaceisbetter/resilneuro/blob/main/fsl-code/make_fsf_lev_1.py). These strings go in places that change each for each iteration of a loop that you would run to go through all of the subjects. For example, I put SUBNUM in my template.fsf file, and created a dictionary in python where SUBNUM takes on the value of the subject identifier during each loop iteration.
+Then, open it in a text editor (like visual studio code) and put searchable strings into it that you can search/replace with with a python script like [make_fsf_lev_1.py](https://github.com/peaceisbetter/resilneuro/blob/main/fsl-code/make_fsf_lev_1.py). These strings go in places that change each for each iteration of a loop that you would run to go through all of the subjects. 
+For example, I put SUBNUM in my template.fsf file, and created a dictionary in python where SUBNUM takes on the value of the subject identifier during each loop iteration. 
+
+*The following is an exerpt from template.fsf:*
+```
+# Output directory
+set fmri(outputdir) "/gpfs/home/jackpmanning/Documents/resil/feat/SUBNUM"
+```
 
 ## Fourth
 After the template.fsf file has been updated with the searchable strings you want, you will have to use the template.fsf file to create an .fsf file for every subject, every condition, and every run. See [run_fsl_python.ipynb](https://github.com/peaceisbetter/resilneuro/blob/main/fsl-code/run_fsl_python.ipynb) for example code on how to do this, along with the output to expect at each step
