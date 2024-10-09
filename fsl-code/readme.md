@@ -4,6 +4,14 @@ This is a readme.md file containing instructions on how to import fMRI data whic
 2. First level analysis
 3. Second level analysis
 
+## To get the events folders and files
+First run make_events_tsv.R
+Then run make_events_tsv_FSL.R
+Then run make_fsf_lev_1.py
+
+These are all run interactively. Run the R script line by line starting from the top. Run the Python script interactively at each # %% comment (this comment turns it functionally into a code chunk/cell like a python notebook file .ipynb)
+
+
 ## First
 Make sure your data is in bids format (see bids validator).
 
