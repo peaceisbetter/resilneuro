@@ -1,3 +1,12 @@
+Follow anydbrainblog vid to set up feat gui for workaround:
+https://www.youtube.com/watch?v=mgyAfunsV34
+
+Then follow mumfordbrainstats video for workaround:
+https://www.youtube.com/watch?v=U3tG7JMEf7M
+
+
+
+
 # Processing fMRIPrepped data in FSL
 This is a readme.md file containing instructions on how to import fMRI data which has been preprocessed with fMRIPrep into FSL for further analysis including:
 1. Spatial smoothing (fMRIprep does NOT do any spatial smoothing)
